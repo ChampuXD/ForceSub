@@ -182,11 +182,6 @@ async def _(event):
 @TheChampu.on(events.NewMessage(pattern="^/start$"))
 async def strt(event):
     await event.reply(
-        f"Hi. I'm a force subscribe bot made specially for @{channel}!\n\nCheckout @TheChampu :)",
-        buttons=[
-            Button.url("Channel", url=f"https://t.me/{channel}"),
-            Button.url("Repository", url="https://github.com/ChampuXD/ForceSub"),
-        ],
     )
 
 
