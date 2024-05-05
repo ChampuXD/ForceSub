@@ -94,8 +94,8 @@ async def _(event):
                 count=count,
             )
             butt = [
-                Button.url("Channel", url=f"https://t.me/{channel}"),
-                Button.inline("UnMute Me", data=f"unmute_{user.id}"),
+                Button.url(" ᴄʜᴀɴɴᴇʟ ", url=f"https://t.me/{channel}"),
+                Button.inline(" ᴜɴᴍᴜᴛᴇ ᴍᴇ ", data=f"unmute_{user.id}"),
             ]
             await TheChampu.edit_permissions(
                 event.chat.id, user.id, until_date=None, send_messages=False
@@ -144,8 +144,8 @@ async def mute_on_msg(event):
             count=count,
         )
         butt = [
-            Button.url("Channel", url=f"https://t.me/{channel}"),
-            Button.inline("UnMute Me", data=f"unmute_{event.sender_id}"),
+            Button.url(" ᴄʜᴀɴɴᴇʟ ", url=f"https://t.me/{channel}"),
+            Button.inline(" ᴜɴᴍᴜᴛᴇ ᴍᴇ ", data=f"unmute_{event.sender_id}"),
         ]
         await event.reply(reply_msg, buttons=butt)
 
@@ -177,12 +177,6 @@ async def _(event):
             cache_time=0,
             alert=True,
         )
-
-
-@TheChampu.on(events.NewMessage(pattern="^/start$"))
-async def strt(event):
-    await event.reply(
-    )
 
 
 log.info("ForceSub Bot has started as @%s.\nDo visit @TheChampu!", bot_self.username)
