@@ -184,7 +184,7 @@ async def strt(event):
         f"ʜɪ. ɪ'ᴍ ᴀ ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ʙᴏᴛ ᴍᴀᴅᴇ sᴘᴇᴄɪᴀʟʟʏ ғᴏʀ @{channel}!\n\nᴄʜᴇᴄᴋᴏᴜᴛ @TheChampu :)",
         buttons=[
             Button.url(" ᴄʜᴀɴɴᴇʟ ", url=f"https://t.me/{channel}"),
-            Button.url(" ʀᴇᴘᴏsɪᴛᴏʀʏ ", url="https://github.com/ChampuXD/ForceSub"),
+            Button.url(" вσтѕ ", url="https://t.me/FenuBots"),
         ],
     )
 
