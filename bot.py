@@ -180,7 +180,7 @@ async def _(event):
 
 @TheChampu.on(events.NewMessage(pattern="^/start$"))
 async def strt(event):
-    await event.reply_photo(photo="https://telegra.ph/file/6f22d2d88f5b43ab9a805.jpg",
+    await event.reply(
         f"ʜɪ. ɪ'ᴍ ᴀ ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ʙᴏᴛ ᴍᴀᴅᴇ sᴘᴇᴄɪᴀʟʟʏ ғᴏʀ @{channel}!\n\nᴄʜᴇᴄᴋᴏᴜᴛ @TheChampu :)",
         buttons=[
             Button.url(" ᴄʜᴀɴɴᴇʟ ", url=f"https://t.me/{channel}"),
