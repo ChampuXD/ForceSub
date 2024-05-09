@@ -13,7 +13,7 @@ logging.basicConfig(
 log = logging.getLogger("TheChampu")
 
 # start the bot
-log.info("Starting...")
+log.info("sᴛᴀʀᴛɪɴɢ...")
 try:
     bottoken = config("BOT_TOKEN")
     xchannel = config("CHANNEL")
@@ -23,7 +23,7 @@ try:
     on_new_msg = config("ON_NEW_MSG", cast=bool)
 except Exception as e:
     log.error(e)
-    log.info("Bot is quiting...")
+    log.info("ʙᴏᴛ ɪs ǫᴜɪᴛɪɴɢ...")
     exit()
 
 try:
@@ -81,7 +81,7 @@ async def _(event):
                 channel=f"@{channel}",
                 count=count,
             )
-            butt = [Button.url("Channel", url=f"https://t.me/{channel}")]
+            butt = [Button.url(" ᴄʜᴀɴɴᴇʟ ", url=f"https://t.me/{channel}")]
         else:
             msg = welcome_not_joined.format(
                 mention=mention,
@@ -158,7 +158,7 @@ async def _(event):
         nm = event.sender.first_name
         if x is False:
             await event.answer(
-                f"You haven't joined @{channel} yet!", cache_time=0, alert=True
+                f"ʏᴏᴜ ʜᴀᴠᴇɴ'ᴛ ᴊᴏɪɴᴇᴅ @{channel} yet!", cache_time=0, alert=True
             )
         elif x is True:
             try:
@@ -168,8 +168,8 @@ async def _(event):
             except Exception as e:
                 log.error(e)
                 return
-            msg = f"Welcome to {(await event.get_chat()).title}, {nm}!\nGood to see you here!"
-            butt = [Button.url("Channel", url=f"https://t.me/{channel}")]
+            msg = f"Welcome to {(await event.get_chat()).title}, {nm}!\nɢᴏᴏᴅ ᴛᴏ sᴇᴇ ʏᴏᴜ ʜᴇʀᴇ!"
+            butt = [Button.url(" ᴄʜᴀɴɴᴇʟ ", url=f"https://t.me/{channel}")]
             await event.edit(msg, buttons=butt)
     else:
         await event.answer(
@@ -178,6 +178,15 @@ async def _(event):
             alert=True,
         )
 
+@TheChampu.on(events.NewMessage(pattern="^/start$"))
+async def strt(event):
+    await event.reply(
+        f"ʜɪ. ɪ'ᴍ ᴀ ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ʙᴏᴛ ᴍᴀᴅᴇ sᴘᴇᴄɪᴀʟʟʏ ғᴏʀ @{channel}!\n\nᴄʜᴇᴄᴋᴏᴜᴛ @TheChampu :)",
+        buttons=[
+            Button.url(" ᴄʜᴀɴɴᴇʟ ", url=f"https://t.me/{channel}"),
+            Button.url(" ʀᴇᴘᴏsɪᴛᴏʀʏ ", url="https://github.com/ChampuXD/ForceSub"),
+        ],
+    )
 
-log.info("ForceSub Bot has started as @%s.\nDo visit @TheChampu!", bot_self.username)
+log.info("ғᴏʀᴄᴇsᴜʙ ʙᴏᴛ ʜᴀs sᴛᴀʀᴛᴇᴅ ᴀs @%s.\nᴅᴏ ᴠɪsɪᴛ @TheChampu!", bot_self.username)
 TheChampu.run_until_disconnected()
